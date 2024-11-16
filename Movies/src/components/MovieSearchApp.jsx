@@ -24,7 +24,7 @@ const MovieSearchApp = () => {
 
   const fetchMoviesByTitle = async () => {
     try {
-      const response = await axios.get(`http://www.omdbapi.com/?s=${searchTerm}&apikey=4eced327`);
+      const response = await axios.get(`https://www.omdbapi.com/?s=${searchTerm}&apikey=4eced327`);
       setMovies(response.data.Search || []); 
     } catch (error) {
       console.error('Error fetching movies by title:', error);
@@ -34,7 +34,7 @@ const MovieSearchApp = () => {
 
   const fetchMovieDetails = async (imdbID) => {
     try {
-      const response = await axios.get(`http://www.omdbapi.com/?i=${imdbID}&apikey=4eced327`);
+      const response = await axios.get(`https://www.omdbapi.com/?i=${imdbID}&apikey=4eced327`);
       setSelectedMovie(response.data);
     } catch (error) {
       console.error('Error fetching movie details:', error);
